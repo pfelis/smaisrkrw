@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEARBOOK SMA HANLIM - Prestasi</title>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia';
+            background-color: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: url("Page.png");
+            background-color: #f4f4f4;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center top;
+            padding-bottom: 2120px;
+        }
+      
+
+        header {
+            text-align: center;
+            background: #6e3b6e;
+            color: #ffcc00;
+            padding: 20px 0;
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+        }
+
+        .menu-button {
+            padding: 10px 18px;
+            font-size: 16px;
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            background-color: gold;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .menu-button:hover {
+            background-color: #c8a200;
+        }
+
+        .achievement {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .achievement img {
+            width: 310px;
+            height: 250px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .description h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #6e3b6e;
+        }
+
+        .description p {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .section {
+            margin-bottom: 0px;
+        }
+
+        .yearbook-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .yearbook-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .yearbook-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .yearbook-card button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #6e3b6e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .yearbook-card button:hover {
+            background-color: #523052;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 18px;
+            color: #ffcf11;
+            padding-top: 50px;
+        }
+
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #6e3b6e;
+            color: #ffeea8;
+        }
+    </style>
+    </head>
+    <body>
+
+    <div style="height: 30px;"></div>
+
+    <header>
+        <h1>Yearbook Class of 2024</h1>
+    </header>
+
+    <div style="height: 815px;"></div>
+
+        <div class="container">
+            <div class="achievement">
+                <img src="Prestasi 1.png" alt="Prestasi 1">
+                <div class="description">
+                    <h3>Peringkat 1</h3>
+                    <p>Lomba Sparring Basket Kabupaten Karawang 2025</p>
+                </div>
+            </div>
+    
+            <div class="achievement">
+                <img src="Prestasi 2.png" alt="Prestasi 2">
+                <div class="description">
+                    <h3>Peringkat 3</h3>
+                    <p>Lomba Taekwondo YOSUKA CUP 2024</p>
+                </div>
+            </div>
+    
+            <div class="achievement">
+                <img src="Prestasi 3.png" alt="Prestasi 3">
+                <div class="description">
+                    <h3>Peringkat 2</h3>
+                    <p>Lomba Sepak Bola Bandung Festival 2024</p>
+                </div>
+            </div>
+    
+            <div class="achievement">
+                <img src="Prestasi 4.png" alt="Prestasi 4">
+                <div class="description">
+                    <h3>Peringkat 1</h3>
+                    <p>BINUS University Business Plan Competition 2023</p>
+                </div>
+            </div>
+    
+            <div class="achievement">
+                <img src="Prestasi 5.png" alt="Prestasi 5">
+                <div class="description">
+                    <h3>Peringkat 2</h3>
+                    <p>World Invention Creativity Olympic 2023</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 10px;">
+            <button class="menu-button" onclick="window.location.href='Menu.html'">Kembali ke Menu Utama</button>
+            <button class="menu-button" onclick="window.location.href='Kontak.html'">Next Page</button>
+      
+        <script>
+            function changeMainVideo(videoID) {
+                const mainVideo = document.getElementById("main-video");
+                mainVideo.src = `https://www.youtube.com/embed/${videoID}`;
+            }
+        </script>
+
+    <section class="contact-info">
+        <h2>Hubungi Kami</h2>
+        <ul>
+            <li><strong>WhatsApp:</strong> 081234567890</li>
+            <li><strong>Email:</strong> smahanlim@gmail.com</li>
+            <li><strong>Alamat:</strong> 172 Chungmin-ro, Songpa District, Seoul, Korea Selatan</li>
+        </ul>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 SMA Hanlim. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

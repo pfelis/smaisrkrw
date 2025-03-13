@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEARBOOK SMA HANLIM - Aktivitas</title>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia';
+            background-color: #ffffff;
+        }
+
+        body {
+            overflow-x: hidden;
+            background-image: url("Page.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center top;
+            padding-bottom: 2120px;
+        }
+
+        header {
+            text-align: center;
+            background: #6e3b6e;
+            color: #ffcc00;
+            padding: 20px 0;
+            font-size: 24px;
+        }
+
+        .menu-button {
+            padding: 10px 18px;
+            font-size: 16px;
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            background-color: gold;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .menu-button:hover {
+            background-color: #c8a200;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            position: relative;
+            min-width: 100%;
+            text-align: center;
+        }
+
+        .carousel img {
+            width: 100%;
+            border-radius: 8px;
+         }
+
+        .carousel-description {
+            position: absolute;
+             bottom: 20px; 
+             left: 50%;
+             transform: translateX(-50%);
+             background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+             font-size: 16px;
+             border-radius: 5px;
+             width: 80%;
+             text-align: center;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            padding: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .left-btn {
+            left: 10px;
+        }
+
+        .right-btn {
+            right: 10px;
+        }
+
+        .video-section {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .main-video {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .main-video iframe {
+        width: 500px; 
+        height: 280px; 
+        }
+
+        .video-description {
+            max-width: 400px;
+        }
+
+        .video-list {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .video-list iframe {
+        width: 180px; 
+        height: 102px; 
+        }
+
+        .section {
+            margin-bottom: 0px;
+        }
+
+        .yearbook-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .yearbook-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .yearbook-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .yearbook-card button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #6e3b6e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .yearbook-card button:hover {
+            background-color: #523052;
+        }
+    
+        .contact-info {
+            text-align: center;
+            font-size: 18px;
+            color: #ffcf11;
+            padding-top: 100px;
+        }
+
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #6e3b6e;
+            color: #ffeea8;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="height: 30px;"></div>
+
+    <header>
+        <h1>Yearbook Class of 2024</h1>
+    </header>
+    <div style="height: 840px;"></div>
+
+    <div class="container">
+        <h2>Rangkaian Aktivitas Kelas 12 Angkatan X</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn left-btn" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel" id="carousel">
+                <div class="carousel-item">
+                    <img src="Karwis 1.jpg" alt="Photo 1">
+                    <div class="carousel-description">Karyawisata Siswa-Siswi Kelas 12 ke Labuan Bajo, Nusa Tenggara Timur.</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Karwis 2.jpg" alt="Photo 2">
+                    <div class="carousel-description">Study Tour Siswa-Siswi Kelas 12 Membuat Kerajinan Tanah Liat.</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Karwis 3.jpg" alt="Photo 3">
+                    <div class="carousel-description">Study Tour Siswa-Siswi Kelas 12 ke Goa Pindul Jogjakarta.</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Karwis 4.jpg" alt="Photo 4">
+                    <div class="carousel-description">Study Tour Siswa-Siswi Kelas 12 ke Gedung Samsung Seoul, Korea.</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Karwis 5.jpg" alt="Photo 5">
+                    <div class="carousel-description">Karyawisata Siswa-Siswi Kelas 12 ke Villa Bogor.</div>
+                </div>
+            </div>
+            <button class="carousel-btn right-btn" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
+        <div class="video-section">
+            <div class="main-video">
+                <iframe id="main-video" src="https://www.youtube.com/embed/9E32UMui4dk" allowfullscreen></iframe>
+                <div class="video-description">
+                    <h3>Karyawisata ke Seoul, Korea</h3>
+                    <p>Siswa-siswi kelas 12 SMA Hanlim berwisata ke Seoul, Korea dan mengunjungi berbagai tempat wisata yang edukatif dan menghibur.</p>
+                </div>
+            </div>
+            <div class="video-list">
+                <button class="video-thumbnail" onclick="changeMainVideo('YOUR_VIDEO_ID_1')">
+                    <iframe src="https://www.youtube.com/embed/49lFw2iScPk" allowfullscreen></iframe>
+                </button>
+                <button class="video-thumbnail" onclick="changeMainVideo('YOUR_VIDEO_ID_2')">
+                    <iframe src="https://www.youtube.com/embed/_ccziye4Aao" allowfullscreen></iframe>
+                </button>
+                <button class="video-thumbnail" onclick="changeMainVideo('YOUR_VIDEO_ID_3')">
+                    <iframe src="https://www.youtube.com/embed/ODTdeprmo5Y" allowfullscreen></iframe>
+                </button>
+                <button class="video-thumbnail" onclick="changeMainVideo('YOUR_VIDEO_ID_4')">
+                    <iframe src="https://www.youtube.com/embed/iSsU8HjAUkk" allowfullscreen></iframe>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div style="text-align: center; margin-top: 10px;">
+    <button class="menu-button" onclick="window.location.href='Menu.html'">Kembali ke Menu Utama</button>
+    <button class="menu-button" onclick="window.location.href='Prestasi.html'">Next Page</button>
+        
+        <script>
+            function changeMainVideo(videoID) {
+                const mainVideo = document.getElementById("main-video");
+                mainVideo.src = `https://www.youtube.com/embed/${videoID}`;
+            }
+        </script>
+
+    <script>
+        let index = 0;
+        function moveSlide(step) {
+            const carousel = document.getElementById("carousel");
+            const items = document.querySelectorAll(".carousel-item");
+            index += step;
+            if (index < 0) {
+                index = items.length - 1;
+            } else if (index >= items.length) {
+                index = 0;
+            }
+            carousel.style.transform = `translateX(${-index * 100}%)`;
+        }
+    </script>
+
+    <section class="contact-info">
+        <h2>Hubungi Kami</h2>
+        <ul>
+            <li><strong>WhatsApp:</strong> 081234567890</li>
+            <li><strong>Email:</strong> smahanlim@gmail.com</li>
+            <li><strong>Alamat:</strong> 172 Chungmin-ro, Songpa District, Seoul, Korea Selatan</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SMA Hanlim. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
